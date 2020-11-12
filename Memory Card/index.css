@@ -1,0 +1,156 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  transition: all 0.5s ease;
+}
+
+.main-hide {
+  pointer-events: none;
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add {
+  position: absolute;
+  transform: translateX(170%);
+  border: 1px grey solid;
+  border-radius: 2px;
+  padding: 0 5px;
+  background-color: white;
+  font-weight: 300;
+}
+
+.add>span {
+  vertical-align: middle;
+}
+
+#card-box {
+  width: 550px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tips {
+  display: none;
+}
+.no-card .tips {
+  display: block;
+}
+.no-card .card-item {
+  display: none;
+}
+.card-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card-hide {
+  opacity: 0;
+}
+.inner-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  transition: transform 0.5s ease;
+}
+
+.front {
+  backface-visibility: hidden;
+}
+
+.back {
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+}
+
+.show-answer .front {
+  transform: rotateX(-180deg);
+}
+.show-answer .back {
+  transform: rotateX(0deg);
+}
+.card-reset .front {
+  transition: none;
+  transform: rotateX(0deg);
+}
+.card-reset .back {
+  transition: none;
+  transform: rotateX(180deg);
+}
+.info {
+  text-align: center;
+}
+
+.control {
+  text-align: center;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.btn>* {
+  vertical-align: middle;
+}
+
+.remove {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  transition: all 0.5s ease;
+}
+
+.remove-hide {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.edit {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.edit-hide {
+  pointer-events: none;
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.edit label {
+  display: block;
+}
+
+.edit textarea {
+  width: 400px;
+}
+
+.edit-control {
+  border: 1px grey solid;
+  margin-top: 20px;
+  width: 6em;
+}
