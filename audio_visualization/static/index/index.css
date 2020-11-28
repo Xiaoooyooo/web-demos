@@ -1,0 +1,9 @@
+body {
+  height: 100vh;
+  background: url(../image/bg.jpg) no-repeat center;
+  background-size: cover;
+  margin: 0;
+}
+#canvas {
+  display: block;
+}
